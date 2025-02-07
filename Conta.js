@@ -1,5 +1,9 @@
+// classe abstrata
 class Conta {
   constructor(agencia, cliente, saldoInicial) {
+    if (this.constructor == Conta) {
+      throw new Error("Não é permitido instanciar essa classe");
+    }
     this.agencia = agencia;
     this.cliente = cliente;
     this.saldo = saldoInicial;
@@ -20,10 +24,17 @@ class Conta {
   }
 
   sacar(valor) {
+    taxa = 1;
+    return this.saque(valor, taxa);
+  }
+
+  saque(valor, taxa) {
+    const valorSacado = taxa * valor;
     if (this.saldo > 0) {
       this.saldo -= valor;
       return valor;
     }
+    return "Saldo insuficiente";
   }
 
   depositar(valor) {

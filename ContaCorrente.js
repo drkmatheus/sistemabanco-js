@@ -7,6 +7,12 @@ class ContaCorrente extends Conta {
     super(agencia, cliente, 0);
     ContaCorrente.numeroDeContas += 1;
   }
+
+  // sobreescreve o metodo sacar da classe Conta
+  sacar(valor) {
+    let taxa = 1.1;
+    return this.saque(valor, taxa);
+  }
 }
 
 export default ContaCorrente;
