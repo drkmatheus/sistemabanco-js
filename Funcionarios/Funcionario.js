@@ -9,6 +9,14 @@ class Funcionario {
     this.senha;
     this.bonus = 1;
   }
+
+  getSenha() {
+    return this.senha;
+  }
+
+  cadastraSenha(senha) {
+    this.senha = senha;
+  }
 }
 
 export default Funcionario;
