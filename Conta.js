@@ -23,9 +23,9 @@ class Conta {
     return this.saldo;
   }
 
+  // metodo abstrato
   sacar(valor) {
-    taxa = 1;
-    return this.saque(valor, taxa);
+    throw new Error("O metodo abstrato nao foi instanciado corretamente.");
   }
 
   saque(valor, taxa) {
