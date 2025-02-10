@@ -6,9 +6,10 @@ class Cliente {
   dataNascimento;
   senha;
 
-  constructor(nomeCompleto, cpf) {
+  constructor(nomeCompleto, cpf, senha) {
     this.nomeCompleto = nomeCompleto;
     this.cpf = cpf;
+    this.senha = senha;
   }
 
   getId() {

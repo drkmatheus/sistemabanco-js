@@ -10,8 +10,8 @@ class Funcionario {
     this.bonus = 1;
   }
 
-  getSenha() {
-    return this.senha;
+  autenticar(senha) {
+    return senha == this.senha;
   }
 
   cadastraSenha(senha) {
